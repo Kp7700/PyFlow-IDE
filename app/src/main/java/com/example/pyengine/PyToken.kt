@@ -1,0 +1,42 @@
+package com.example.pyengine
+
+enum class TokenType {
+    // Keywords
+    KW_DEF, KW_CLASS, KW_RETURN, KW_IF, KW_ELIF, KW_ELSE, KW_WHILE, KW_FOR, KW_IN,
+    KW_TRY, KW_EXCEPT, KW_FINALLY, KW_RAISE, KW_IMPORT, KW_FROM, KW_AS,
+    KW_PASS, KW_BREAK, KW_CONTINUE, KW_LAMBDA, KW_GLOBAL, KW_NONLOCAL,
+    KW_AND, KW_OR, KW_NOT, KW_IS, KW_WITH, KW_YIELD, KW_ASSERT,
+    KW_TRUE, KW_FALSE, KW_NONE,
+
+    // Identifiers & Literals
+    IDENTIFIER,
+    INT_LITERAL,
+    FLOAT_LITERAL,
+    STRING_LITERAL,
+    FSTRING_LITERAL,
+
+    // Operators
+    PLUS, MINUS, STAR, SLASH, DOUBLE_SLASH, PERCENT, STAR_STAR,
+    EQUAL, PLUS_EQUAL, MINUS_EQUAL, STAR_EQUAL, SLASH_EQUAL, DOUBLE_SLASH_EQUAL, PERCENT_EQUAL, STAR_STAR_EQUAL,
+    DOUBLE_EQUAL, NOT_EQUAL, LESS, LESS_EQUAL, GREATER, GREATER_EQUAL,
+    AMPERSAND, PIPE, CARET, TILDE, LSHIFT, RSHIFT,
+
+    // Delimiters
+    LPAREN, RPAREN,
+    LBRACKET, RBRACKET,
+    LBRACE, RBRACE,
+    COLON, COMMA, DOT, SEMICOLON, ARROW,
+
+    // Structure
+    NEWLINE,
+    INDENT,
+    DEDENT,
+    EOF
+}
+
+data class PyToken(
+    val type: TokenType,
+    val value: String,
+    val line: Int,
+    val column: Int
+)

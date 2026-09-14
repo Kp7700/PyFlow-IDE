@@ -1,0 +1,6 @@
+{
+  "name": "PyPocket",
+  "description": "A lightweight, powerful Python IDE and offline interpreter for Android with syntax highlighting, live execution, interactive console, and multi-file project management.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
